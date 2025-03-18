@@ -1,0 +1,10 @@
+allure-pytest
+allure-python-commons
+jsonschema
+matplotlib
+mypy-extensions
+mysql-connector-python
+pytest
+python-dateutil
+requests
+selenium
