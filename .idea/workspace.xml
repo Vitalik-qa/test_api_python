@@ -42,7 +42,7 @@
       <recent name="C:\Users\Vitaliy\Documents\GitHub\test_api_python\test_pet" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_pet.test_post_pet_uploadImage_name_negative">
+  <component name="RunManager" selected="Python tests.Python tests for test_pet.test_post_pet_updates_id_negative">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -64,7 +64,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_delete.test_delete_pet" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_pet.test_get_pet_findByStatus" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -74,11 +74,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_delete.test_delete_pet&quot;" />
+      <option name="_new_target" value="&quot;test_pet.test_get_pet_findByStatus&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_pet.test_post_pet_uploadImage" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_pet.test_get_pet_status_negative" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -88,11 +88,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_pet.test_post_pet_uploadImage&quot;" />
+      <option name="_new_target" value="&quot;test_pet.test_get_pet_status_negative&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_pet.test_post_pet_uploadImage_name_negative" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_pet.test_post_pet_updates" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -102,7 +102,21 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_pet.test_post_pet_uploadImage_name_negative&quot;" />
+      <option name="_new_target" value="&quot;test_pet.test_post_pet_updates&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_pet.test_post_pet_updates_id_negative" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="test_api_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_pet.test_post_pet_updates_id_negative&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -120,7 +134,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_user.test_put_pet" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_pet.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -130,40 +144,26 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_user.test_put_pet&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in test_user.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="test_api_python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_user.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_pet.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.main" />
       <item itemvalue="Python tests.Python tests for test_post.test_post_pet" />
-      <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_uploadImage" />
-      <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_uploadImage_name_negative" />
-      <item itemvalue="Python tests.Python tests for test_user.test_put_pet" />
-      <item itemvalue="Python tests.Python tests in test_user.py" />
-      <item itemvalue="Python tests.Python tests for test_delete.test_delete_pet" />
+      <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_findByStatus" />
+      <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_status_negative" />
+      <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates" />
+      <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates_id_negative" />
+      <item itemvalue="Python tests.Python tests in test_pet.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_uploadImage_name_negative" />
-        <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_uploadImage" />
-        <item itemvalue="Python tests.Python tests for test_user.test_put_pet" />
-        <item itemvalue="Python tests.Python tests in test_user.py" />
-        <item itemvalue="Python tests.Python tests for test_delete.test_delete_pet" />
+        <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates_id_negative" />
+        <item itemvalue="Python tests.Python tests in test_pet.py" />
+        <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates" />
+        <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_status_negative" />
+        <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_findByStatus" />
       </list>
     </recent_temporary>
   </component>

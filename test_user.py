@@ -3,6 +3,8 @@ import json
 import pytest
 import requests
 
+#User для методов: POST / user, PUT / user / {username}, GET / user / {username}, DELETE / user / {username}.
+
 
 def test_put_pet():
     url = "https://petstore.swagger.io/v2/pet"
