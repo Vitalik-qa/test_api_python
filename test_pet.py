@@ -113,88 +113,76 @@ def test_delete_pet_id_negative():
 
 # 1
 def test_post_pet_uploadImage():
-    url = "https://petstore.swagger.io/v2/pet"
 
     request = {}
     request['name'] = "sberCat"
     request['category'] = {}
     request['category']['name'] = "cats"
     request['photoUrls'] = ["photoSberCat1"]
-    response_post = requests.post(url, json=request)
+    response_post = requests.post(urls.url_pet_post, json=request)
     print()
     print("result pretty =", response_post.json())
     assert response_post.json()['id'] is not None
 
-    url_uploadImage = "https://petstore.swagger.io/v2/pet/" + str(response_post.json()['id']) + "/uploadImage"
     additional_metadata = {'additionalMetadata': '111'}
     files = {'file': open('test.jpg', 'rb')}
-    response_post_uploadImage = requests.post(url_uploadImage, data=additional_metadata, files=files)
-    print('url_uploadImage', url_uploadImage)
+    response_post_uploadImage = requests.post(urls.url_uploadImage(str(response_post.json()['id'])), data=additional_metadata, files=files)
     print('response_post_uploadImage', response_post_uploadImage.json())
     assert response_post_uploadImage.json()['code'] == 200
 
 
 def test_post_pet_uploadImage_name_negative():
-    url = "https://petstore.swagger.io/v2/pet"
-
     request = {}
     request['name'] = "sberCat"
     request['category'] = {}
     request['category']['name'] = "cats"
     request['photoUrls'] = ["photoSberCat1"]
-    response_post = requests.post(url, json=request)
+    response_post = requests.post(urls.url_pet_post, json=request)
     print()
     print("result pretty =", response_post.json())
     assert response_post.json()['id'] is not None
 
-    url_uploadImage = "https://petstore.swagger.io/v2/pet/" + "9223372036854776000" + "/uploadImage"
     additional_metadata = {'additionalMetadata': '111'}
     files = {'file': open('test.jpg', 'rb')}
-    response_post_uploadImage = requests.post(url_uploadImage, data=additional_metadata, files=files)
-    print('url_uploadImage', url_uploadImage)
+    response_post_uploadImage = requests.post(urls.url_uploadImage("9223372036854776000"), data=additional_metadata, files=files)
     print('response_post_uploadImage', response_post_uploadImage.json())
     assert response_post_uploadImage.json()['code'] == 404
 
 # 4
 def test_get_pet_findByStatus():
-    url = "https://petstore.swagger.io/v2/pet/findByStatus"
 
     params = {'status': 'pending'}
-    response_get = requests.get(url, params=params)
+    response_get = requests.get(urls.url_findByStatus, params=params)
     print()
     print("result pretty =", json.dumps(response_get.json(), indent=4, sort_keys=True))
     assert response_get.status_code == 200
 
-
-def test_get_pet_status_negative():
-    url = "https://petstore.swagger.io/v2/pet/findByStatus"
+def test_get_pet_findByStatus_status_negative():
 
     params = {'status': 'dog'}
-    response_get = requests.get(url, params=params)
+    response_get = requests.get(urls.url_findByStatus, params=params)
     print()
     print("result pretty =", json.dumps(response_get.json(), indent=4, sort_keys=True))
     assert response_get.json() == []
 
 # 6
 def test_post_pet_updates():
-    url = "https://petstore.swagger.io/v2/pet"
 
     request = {}
-    request['name'] = "sberCat"
+    request['name'] =  support_steps.generate_random_letter_string(6)
     request['category'] = {}
     request['category']['name'] = "cats"
     request['photoUrls'] = ["photoSberCat1"]
-    response_post = requests.post(url, json=request)
+    response_post = requests.post(urls.url_pet_post, json=request)
     print()
     print("result pretty =", response_post.json())
     assert response_post.json()['id'] is not None
 
-    urlGet = "https://petstore.swagger.io/v2/pet/" + str(response_post.json()['id'])
     parems = {'name': 'Doggii', 'status': 'available'}
-    response_post_updates = requests.post(urlGet, parems)
+    response_post_updates = requests.post(urls.url_pet_get_id(str(response_post.json()['id'])), parems)
     print(response_post_updates.json())
 
-    response_get = requests.get(urlGet)
+    response_get = requests.get(urls.url_pet_get_id(str(response_post.json()['id'])))
     print(response_get.json())
     assert response_get.json()['id'] == response_post.json()['id']
     assert response_get.json()['name'] == 'Doggii'
@@ -202,9 +190,8 @@ def test_post_pet_updates():
 
 def test_post_pet_updates_id_negative():
 
-    urlGet = "https://petstore.swagger.io/v2/pet/7777777667777"
     parems = {'name': 'Doggii', 'status': 'available'}
-    response_post_updates = requests.post(urlGet, parems)
+    response_post_updates = requests.post(urls.url_pet_get_id("7777777667777"), parems)
     print(response_post_updates.json())
 
     assert response_post_updates.json()['code'] == 404
