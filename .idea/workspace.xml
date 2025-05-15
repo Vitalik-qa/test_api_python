@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45515ce8-d7fc-44bb-8c90-d975b00f2389" name="Changes" comment="" />
+    <list default="true" id="45515ce8-d7fc-44bb-8c90-d975b00f2389" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_pet.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +18,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="auto" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -106,7 +114,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_pet.test_post_pet_updates_id_negative" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_pet.test_post_pet_updates_id_negative" type="tests" factoryName="Autodetect" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -151,15 +159,14 @@
     <list>
       <item itemvalue="Python.main" />
       <item itemvalue="Python tests.Python tests for test_post.test_post_pet" />
+      <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates_id_negative" />
       <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_findByStatus" />
       <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_status_negative" />
       <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates" />
-      <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates_id_negative" />
       <item itemvalue="Python tests.Python tests in test_pet.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates_id_negative" />
         <item itemvalue="Python tests.Python tests in test_pet.py" />
         <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates" />
         <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_status_negative" />
@@ -183,11 +190,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
