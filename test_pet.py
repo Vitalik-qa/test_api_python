@@ -116,8 +116,8 @@ def test_delete_pet():
     assert response_get.json()['message'] == "Pet not found"
 
 
-def test_delete_pet():
-    url_delete = "https://petstore.swagger.io/v2/pet/" + "7777777777"
+def test_delete_pet_id_negative():
+    url_delete = "https://petstore.swagger.io/v2/pet/" + "7777771117777"
     response_delete = requests.delete(url_delete)
     print(response_delete)
     assert response_delete.status_code == 404
@@ -213,7 +213,7 @@ def test_post_pet_updates():
 
 def test_post_pet_updates_id_negative():
 
-    urlGet = "https://petstore.swagger.io/v2/pet/77777777777"
+    urlGet = "https://petstore.swagger.io/v2/pet/7788777776777"
     parems = {'name': 'Doggii', 'status': 'available'}
     response_post_updates = requests.post(urlGet, parems)
     print(response_post_updates.json())
