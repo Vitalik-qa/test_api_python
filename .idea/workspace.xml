@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45515ce8-d7fc-44bb-8c90-d975b00f2389" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Steps/support_steps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test_pet.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,10 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="auto" />
-      </map>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -33,13 +38,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Vitaliy/Documents/GitHub/test_api_python&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Vitaliy/Documents/GitHub/test_api_python",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Vitaliy\Documents\GitHub\test_api_python" />
@@ -50,7 +56,7 @@
       <recent name="C:\Users\Vitaliy\Documents\GitHub\test_api_python\test_pet" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_pet.test_post_pet_updates_id_negative">
+  <component name="RunManager" selected="Python tests.Python tests for test_pet.test_delete_pet">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -72,7 +78,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_pet.test_get_pet_findByStatus" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_pet.test_delete_pet" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -82,11 +88,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_pet.test_get_pet_findByStatus&quot;" />
+      <option name="_new_target" value="&quot;test_pet.test_delete_pet&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_pet.test_get_pet_status_negative" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_pet.test_post_pet" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -96,11 +102,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_pet.test_get_pet_status_negative&quot;" />
+      <option name="_new_target" value="&quot;test_pet.test_post_pet&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_pet.test_post_pet_updates" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_pet.test_post_pet_name_negative" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -110,11 +116,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_pet.test_post_pet_updates&quot;" />
+      <option name="_new_target" value="&quot;test_pet.test_post_pet_name_negative&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_pet.test_post_pet_updates_id_negative" type="tests" factoryName="Autodetect" nameIsGenerated="true">
+    <configuration name="Python tests for test_pet.test_put_pet" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -124,7 +130,21 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_pet.test_post_pet_updates_id_negative&quot;" />
+      <option name="_new_target" value="&quot;test_pet.test_put_pet&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_pet.test_put_pet_id_negative" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="test_api_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_pet.test_put_pet_id_negative&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -142,35 +162,22 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_pet.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="test_api_python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_pet.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.main" />
       <item itemvalue="Python tests.Python tests for test_post.test_post_pet" />
-      <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates_id_negative" />
-      <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_findByStatus" />
-      <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_status_negative" />
-      <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates" />
-      <item itemvalue="Python tests.Python tests in test_pet.py" />
+      <item itemvalue="Python tests.Python tests for test_pet.test_delete_pet" />
+      <item itemvalue="Python tests.Python tests for test_pet.test_post_pet" />
+      <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_name_negative" />
+      <item itemvalue="Python tests.Python tests for test_pet.test_put_pet" />
+      <item itemvalue="Python tests.Python tests for test_pet.test_put_pet_id_negative" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_pet.py" />
-        <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates" />
-        <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_status_negative" />
-        <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_findByStatus" />
+        <item itemvalue="Python tests.Python tests for test_pet.test_delete_pet" />
+        <item itemvalue="Python tests.Python tests for test_pet.test_put_pet_id_negative" />
+        <item itemvalue="Python tests.Python tests for test_pet.test_put_pet" />
+        <item itemvalue="Python tests.Python tests for test_pet.test_post_pet" />
+        <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_name_negative" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +203,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>
@@ -207,9 +214,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
