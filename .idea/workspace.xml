@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45515ce8-d7fc-44bb-8c90-d975b00f2389" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Steps/generate_json_steps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_pet.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet.py" afterDir="false" />
     </list>
@@ -24,6 +25,11 @@
         <option name="title" value="All" />
       </GitPushTagMode>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -34,14 +40,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Vitaliy/Documents/GitHub/test_api_python",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Vitaliy/Documents/GitHub/test_api_python&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Vitaliy\Documents\GitHub\test_api_python" />
@@ -52,7 +58,7 @@
       <recent name="C:\Users\Vitaliy\Documents\GitHub\test_api_python\test_pet" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_pet.test_post_pet_uploadImage_name_negative">
+  <component name="RunManager" selected="Python tests.Python tests for test_pet.test_post_pet">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -88,7 +94,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_pet.test_get_pet_findByStatus_status_negative" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_pet.test_post_pet" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -98,7 +104,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_pet.test_get_pet_findByStatus_status_negative&quot;" />
+      <option name="_new_target" value="&quot;test_pet.test_post_pet&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -161,7 +167,7 @@
     <list>
       <item itemvalue="Python.main" />
       <item itemvalue="Python tests.Python tests for test_post.test_post_pet" />
-      <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_findByStatus_status_negative" />
+      <item itemvalue="Python tests.Python tests for test_pet.test_post_pet" />
       <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_uploadImage" />
       <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_uploadImage_name_negative" />
       <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_findByStatus" />
@@ -169,11 +175,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_pet.test_post_pet" />
+        <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates_id_negative" />
+        <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_findByStatus" />
         <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_uploadImage_name_negative" />
         <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_uploadImage" />
-        <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_findByStatus_status_negative" />
-        <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_findByStatus" />
-        <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates_id_negative" />
       </list>
     </recent_temporary>
   </component>

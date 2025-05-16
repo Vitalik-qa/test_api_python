@@ -4,6 +4,8 @@ import pytest
 import requests
 import resources.urls as urls
 import Steps.support_steps as support_steps
+import Steps.generate_json_steps as generate_json_steps
+import Steps.assert_steps as assert_steps
 
 
 # Тест получения  питомца
@@ -16,7 +18,7 @@ def test_get_pet_id():
 
 # Тест получения  питомца по несуществующему ID
 def test_get_pet_id_negative():
-    # Отправляем запрос
+# Отправляем запрос
     response_get = requests.get(urls.url_pet_get_id("111111111111"))
 # Анализируем ответ
     print("result pretty =", json.dumps(response_get.json(), indent=4, sort_keys=True))
@@ -24,21 +26,15 @@ def test_get_pet_id_negative():
 
 # Тест создания нового питомца
 def test_post_pet():
-# Создаем JSON
-    request = {}
-    request['name'] = support_steps.generate_random_letter_string(6)
-    request['category'] = {}
-    request['category']['name'] = "cats"
-    request['photoUrls'] = ["photoSberCat1"]
+# Создаем JSON c с обязательными параметрами
+    request = generate_json_steps.create_json_pet_required_params()
 # Отправлям запрос
     response_post = requests.post(urls.url_pet_post, json=request)
 # Анализируем ответ
-    print("result pretty =", response_post.json())
     assert response_post.json()['id'] is not None
 # Проверяем через GET, что объект создан
     response_get = requests.get(urls.url_pet_get_id(str(response_post.json()['id'])))
-    assert response_get.json()['id'] == response_post.json()['id']
-
+    assert_steps.assert_equals_response_ids(response_post,response_get)
 # Тест создания нового питомца c негативным Name
 def test_post_pet_name_negative():
 # Создаем JSON
