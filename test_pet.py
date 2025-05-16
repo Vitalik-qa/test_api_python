@@ -31,7 +31,7 @@ def test_post_pet():
 # Отправлям запрос
     response_post = requests.post(urls.url_pet_post, json=request)
 # Анализируем ответ
-    assert response_post.json()['id'] is not None
+    assert_steps.assert_not_none_id(response_post)
 # Проверяем через GET, что объект создан
     response_get = requests.get(urls.url_pet_get_id(str(response_post.json()['id'])))
     assert_steps.assert_equals_response_ids(response_post,response_get)
