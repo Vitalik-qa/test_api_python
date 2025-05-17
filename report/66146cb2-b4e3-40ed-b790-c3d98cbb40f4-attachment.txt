@@ -1,0 +1,6 @@
+{'name': 'faaabc', 'category': {'name': 'afaebe'}, 'photoUrts': ['cfadda']}
+<Response [200]>
+PASSED
+first = {'id': 9223372036854775807, 'category': {'id': 0, 'name': 'afaebe'}, 'name': 'faaabc', 'photoUrls': [], 'tags': []}
+second = {'id': 9223372036854775807, 'category': {'id': 0, 'name': 'dabeba'}, 'name': 'aaccce', 'photoUrls': [], 'tags': []}
+PASSED

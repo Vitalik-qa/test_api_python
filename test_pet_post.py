@@ -28,11 +28,11 @@ def test_post_pet():
 @pytest.mark.negative_tests
 # Тест создания нового питомца c негативным Name
 def test_post_pet_name_negative():
-    # Создаем JSON
-    request = generate_json_steps.create_json_pet_not_name_params()
-    # Отправлям запрос
-    response_post = requests.post(urls.url_pet_post, json=request)
-    # Анализируем ответ
-    print("result pretty =", response_post.json())
-    assert_steps.assert_type_unknown(response_post)
+    with allure.step("Создаем JSON"):
+        request = generate_json_steps.create_json_pet_not_name_params()
+    with allure.step("Отправлям запрос POST"):
+        response_post = requests.post(urls.url_pet_post, json=request)
+    with allure.step("Анализируем ответ"):
+        print("result pretty =", response_post.json())
+        assert_steps.assert_type_unknown(response_post)
 

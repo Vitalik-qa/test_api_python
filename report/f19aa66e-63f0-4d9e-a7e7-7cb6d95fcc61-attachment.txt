@@ -1,0 +1,4 @@
+{'name': 'aadcee', 'category': {'name': []}, 'photoUrts': ['eeeaab']}
+result pretty = {'code': 500, 'type': 'unknown', 'message': 'something bad happened'}
+<Response [500]>
+PASSED

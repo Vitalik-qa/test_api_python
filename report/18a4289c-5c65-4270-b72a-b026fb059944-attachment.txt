@@ -1,0 +1,7 @@
+result pretty = {
+    "code": 1,
+    "message": "Pet not found",
+    "type": "error"
+}
+<Response [404]>
+PASSED
