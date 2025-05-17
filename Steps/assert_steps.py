@@ -46,3 +46,9 @@ def assert_type_unknown(response):
     print(response)
     assert response.json()['type'] == "unknown"
     print("PASSED")
+
+# Функцмя проверяет утверждение, что  ответ пустой
+def assert_response_none(response):
+    print(response)
+    assert response.json() == []
+    print("PASSED")
