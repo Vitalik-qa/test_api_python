@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45515ce8-d7fc-44bb-8c90-d975b00f2389" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/test_pet_delete.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_pet_get.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_pet_get_findByStatus.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_pet_post.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_pet_post_updates.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_pet_put.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_pet_put_uploadImage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_pet.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_pet_delete.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet_delete.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_pet_get.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet_get.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_pet_get_findByStatus.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet_get_findByStatus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_pet_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet_post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_pet_post_updates.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet_post_updates.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_pet_put.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet_put.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_pet_put_uploadImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet_put_uploadImage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +65,7 @@
       <recent name="C:\Users\Vitaliy\Documents\GitHub\test_api_python\test_pet" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_pet_get.test_pet">
+  <component name="RunManager" selected="Python tests.Python tests for test_pet_put.test_put_pet_id_negative">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,7 +101,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_pet.test_get_pet_findByStatus" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_pet_put.test_put_pet_id_negative" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -109,7 +111,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_pet.test_get_pet_findByStatus&quot;" />
+      <option name="_new_target" value="&quot;test_pet_put.test_put_pet_id_negative&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -175,16 +177,16 @@
       <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_findByStatus_status_negative" />
       <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates" />
       <item itemvalue="Python tests.Python tests for test_pet_get.test_pet" />
-      <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_findByStatus" />
+      <item itemvalue="Python tests.Python tests for test_pet_put.test_put_pet_id_negative" />
       <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates_id_negative" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_pet_put.test_put_pet_id_negative" />
         <item itemvalue="Python tests.Python tests for test_pet_get.test_pet" />
         <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates_id_negative" />
         <item itemvalue="Python tests.Python tests for test_pet.test_post_pet_updates" />
         <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_findByStatus_status_negative" />
-        <item itemvalue="Python tests.Python tests for test_pet.test_get_pet_findByStatus" />
       </list>
     </recent_temporary>
   </component>
