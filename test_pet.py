@@ -2,6 +2,7 @@ import pytest
 import json
 import pytest
 import requests
+import allure
 import resources.urls as urls
 import Steps.support_steps as support_steps
 import Steps.generate_json_steps as generate_json_steps
@@ -16,7 +17,9 @@ def test_get_pet_id_negative():
     print("result pretty =", json.dumps(response_get.json(), indent=4, sort_keys=True))
     assert_steps.assert_type_error(response_get)
 
-
+@pytest.mark.smoke_tests
+@pytest.mark.regress_tests
+@pytest.mark.positive_tests
 # Тест создания нового питомца
 def test_post_pet():
     # Создаем JSON c с обязательными параметрами
@@ -29,7 +32,8 @@ def test_post_pet():
     response_get = requests.get(urls.url_pet_get_id(str(response_post.json()['id'])))
     assert_steps.assert_equals_response_ids(response_post, response_get)
 
-
+@pytest.mark.regress_tests
+@pytest.mark.negative_tests
 # Тест создания нового питомца c негативным Name
 def test_post_pet_name_negative():
     # Создаем JSON
@@ -40,7 +44,9 @@ def test_post_pet_name_negative():
     print("result pretty =", response_post.json())
     assert_steps.assert_type_unknown(response_post)
 
-
+@pytest.mark.smoke_tests
+@pytest.mark.regress_tests
+@pytest.mark.positive_tests
 # Тест редактирования  питомца
 def test_put_pet():
     # Создаем JSON
@@ -59,7 +65,8 @@ def test_put_pet():
     response_get = requests.get(urls.url_pet_get_id(str(response_put.json()['id'])))
     assert_steps.assert_equals_response_names(response_put, response_get)
 
-
+@pytest.mark.regress_tests
+@pytest.mark.negative_tests
 # Тест редактирования питомца по несуществующему ID
 def test_put_pet_id_negative():
     # Создаем JSON
@@ -72,7 +79,9 @@ def test_put_pet_id_negative():
     print("result pretty =", response_put.json())
     assert_steps.assert_type_unknown(response_put)
 
-
+@pytest.mark.smoke_tests
+@pytest.mark.regress_tests
+@pytest.mark.positive_tests
 # Тест удаления питомца
 def test_delete_pet():
     # Создаем JSON
@@ -90,7 +99,8 @@ def test_delete_pet():
     print('urlGet', response_get.json())
     assert_steps.assert_type_error(response_get)
 
-
+@pytest.mark.regress_tests
+@pytest.mark.negative_tests
 # Тест удаление питомца по несуществующему ID
 def test_delete_pet_id_negative():
     # Отправлям запрос
@@ -99,7 +109,9 @@ def test_delete_pet_id_negative():
     print(response_delete)
     assert_steps.assert_status_code_404(response_delete)
 
-
+@pytest.mark.smoke_tests
+@pytest.mark.regress_tests
+@pytest.mark.positive_tests
 # Тест загрузки изображения
 def test_post_pet_uploadImage():
     # Создаем JSON
@@ -119,7 +131,8 @@ def test_post_pet_uploadImage():
     print('response_post_uploadImage', response_post_uploadImage.json())
     assert_steps.assert_status_code_200(response_post_uploadImage)
 
-
+@pytest.mark.regress_tests
+@pytest.mark.negative_tests
 # Тест загрузки изображения по негативному Name
 def test_post_pet_uploadImage_name_negative():
     # Создаем JSON
@@ -139,7 +152,9 @@ def test_post_pet_uploadImage_name_negative():
     print('response_post_uploadImage', response_post_uploadImage.json())
     assert_steps.assert_status_code_404(response_post_uploadImage)
 
-
+@pytest.mark.smoke_tests
+@pytest.mark.regress_tests
+@pytest.mark.positive_tests
 # Тест поиска питомца по статусу
 def test_get_pet_findByStatus():
     # Создаем JSON
@@ -150,7 +165,8 @@ def test_get_pet_findByStatus():
     print("result pretty =", json.dumps(response_get.json(), indent=4, sort_keys=True))
     assert_steps.assert_status_code_200(response_get)
 
-
+@pytest.mark.regress_tests
+@pytest.mark.negative_tests
 # Тест поиска питомца по несуществующему статусу
 def test_get_pet_findByStatus_status_negative():
     # Создаем JSON
@@ -161,7 +177,9 @@ def test_get_pet_findByStatus_status_negative():
     print("result pretty =", json.dumps(response_get.json(), indent=4, sort_keys=True))
     assert_steps.assert_response_none(response_get)
 
-
+@pytest.mark.smoke_tests
+@pytest.mark.regress_tests
+@pytest.mark.positive_tests
 # Тест обновление питомца через Форму
 def test_post_pet_updates():
     # Создаем JSON
@@ -182,7 +200,8 @@ def test_post_pet_updates():
     assert_steps.assert_equals_response_ids(response_post, response_get)
     assert_steps.assert_equals_response_names(response_post, response_get)
 
-
+@pytest.mark.regress_tests
+@pytest.mark.negative_tests
 # Тест обновление питомца через Форму по несуществующему ID
 def test_post_pet_updates_id_negative():
     # Создаем JSON
