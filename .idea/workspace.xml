@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45515ce8-d7fc-44bb-8c90-d975b00f2389" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_pet.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_pet_delete.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet_delete.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steps/assert_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Steps/assert_steps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steps/generate_json_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Steps/generate_json_steps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_pet_get.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet_get.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_pet_get_findByStatus.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet_get_findByStatus.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_pet_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet_post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_pet_post_updates.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet_post_updates.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_pet_put.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet_put.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_pet_put_uploadImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pet_put_uploadImage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
