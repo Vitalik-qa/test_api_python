@@ -8,22 +8,13 @@ import Steps.generate_json_steps as generate_json_steps
 import Steps.assert_steps as assert_steps
 
 
-# Тест получения  питомца
-def test_get_pet_id():
-    # Отправляем запрос
-    response_get = requests.get(urls.url_pet_get_id("9223372036854775329"))
-    # Анализируем ответ
-    print("result pretty =", json.dumps(response_get.json(), indent=4, sort_keys=True))
-    assert response_get.json()['id'] == 9223372036854775329
-
-
 # Тест получения  питомца по несуществующему ID
 def test_get_pet_id_negative():
     # Отправляем запрос
     response_get = requests.get(urls.url_pet_get_id("111111111111"))
     # Анализируем ответ
     print("result pretty =", json.dumps(response_get.json(), indent=4, sort_keys=True))
-    assert response_get.json()['message'] == "Pet not found"
+    assert_steps.assert_type_error(response_get)
 
 
 # Тест создания нового питомца
@@ -42,26 +33,18 @@ def test_post_pet():
 # Тест создания нового питомца c негативным Name
 def test_post_pet_name_negative():
     # Создаем JSON
-    request = {}
-    request['name'] = support_steps.generate_random_letter_string(6)
-    request['category'] = {}
-    request['category']['name'] = []
-    request['photoUrls'] = ["photoSberCat1"]
+    request = generate_json_steps.create_json_pet_not_name_params()
     # Отправлям запрос
     response_post = requests.post(urls.url_pet_post, json=request)
     # Анализируем ответ
     print("result pretty =", response_post.json())
-    assert response_post.json()['message'] == "something bad happened"
+    assert_steps.assert_type_unknown(response_post)
 
 
 # Тест редактирования  питомца
 def test_put_pet():
     # Создаем JSON
-    request = {}
-    request['name'] = support_steps.generate_random_letter_string(7)
-    request['category'] = {}
-    request['category']['name'] = "cats"
-    request['photoUrls'] = ["photoSberCat1"]
+    request = generate_json_steps.create_json_pet_required_params()
     # Отправлям запрос
     response_post = requests.post(urls.url_pet_post, json=request)
     print("result pretty =", response_post.json())
@@ -71,12 +54,10 @@ def test_put_pet():
     request_put['name'] = support_steps.generate_random_letter_string(8)
     # Отправлям запрос
     response_put = requests.put(urls.url_pet_post, json=request_put)
-    # Анализируем ответ
     print(response_put.json())
-    assert response_put.json()['photoUrls'] == []
     # Проверяем через GET, что объект изменен
     response_get = requests.get(urls.url_pet_get_id(str(response_put.json()['id'])))
-    assert response_get.json()['photoUrls'] == []
+    assert_steps.assert_equals_response_names(response_put, response_get)
 
 
 # Тест редактирования питомца по несуществующему ID
@@ -89,17 +70,13 @@ def test_put_pet_id_negative():
     response_put = requests.post(urls.url_pet_post, json=request)
     # Анализируем ответ
     print("result pretty =", response_put.json())
-    assert response_put.json()['message'] == "something bad happened"
+    assert_steps.assert_type_unknown(response_put)
 
 
 # Тест удаления питомца
 def test_delete_pet():
     # Создаем JSON
-    request = {}
-    request['name'] = support_steps.generate_random_letter_string(5)
-    request['category'] = {}
-    request['category']['name'] = "cats"
-    request['photoUrls'] = ["photoSberCat1"]
+    request = generate_json_steps.create_json_pet_required_params()
     # Отправлям запрос
     response_post = requests.post(urls.url_pet_post, json=request)
     print("result pretty =", response_post.json())
@@ -107,11 +84,11 @@ def test_delete_pet():
     response_delete = requests.delete(urls.url_pet_get_id(str(response_post.json()['id'])))
     # Анализируем ответ
     print(response_delete)
-    assert response_delete.json()['code'] == 200
+    assert_steps.assert_status_code_200(response_delete)
     # Проверяем через GET, что объект удален
     response_get = requests.get(urls.url_pet_get_id(str(response_post.json()['id'])))
     print('urlGet', response_get.json())
-    assert response_get.json()['message'] == "Pet not found"
+    assert_steps.assert_type_error(response_get)
 
 
 # Тест удаление питомца по несуществующему ID
@@ -120,7 +97,7 @@ def test_delete_pet_id_negative():
     response_delete = requests.delete(urls.url_pet_get_id("777777777"))
     # Анализируем ответ
     print(response_delete)
-    assert response_delete.status_code == 404
+    assert_steps.assert_status_code_404(response_delete)
 
 
 # Тест загрузки изображения

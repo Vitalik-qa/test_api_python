@@ -24,3 +24,13 @@ def create_json_pet_all_params():
     request['status'] = "available"
     print(request)
     return request
+
+# Создаем JSON   без name
+def create_json_pet_not_name_params():
+    request = {}
+    request['name'] = support_steps.generate_random_letter_string(6)
+    request['category'] = {}
+    request['category']['name'] = []
+    request['photoUrts'] = [support_steps.generate_random_letter_string(6)]
+    print(request)
+    return request
