@@ -103,17 +103,13 @@ def test_delete_pet_id_negative():
 # Тест загрузки изображения
 def test_post_pet_uploadImage():
     # Создаем JSON
-    request = {}
-    request['name'] = "sberCat"
-    request['category'] = {}
-    request['category']['name'] = "cats"
-    request['photoUrls'] = ["photoSberCat1"]
+    request = generate_json_steps.create_json_pet_required_params()
     # Отправлям запрос
     response_post = requests.post(urls.url_pet_post, json=request)
     # Анализируем ответ
     print("result pretty =", response_post.json())
-    assert response_post.json()['id'] is not None
-
+    assert_steps.assert_not_none_id(response_post)
+    # Создаем файл
     additional_metadata = {'additionalMetadata': '111'}
     files = {'file': open('test.jpg', 'rb')}
     # Отправлям запрос
@@ -121,23 +117,19 @@ def test_post_pet_uploadImage():
                                               data=additional_metadata, files=files)
     # Анализируем ответ
     print('response_post_uploadImage', response_post_uploadImage.json())
-    assert response_post_uploadImage.json()['code'] == 200
+    assert_steps.assert_status_code_200(response_post_uploadImage)
 
 
 # Тест загрузки изображения по негативному Name
 def test_post_pet_uploadImage_name_negative():
     # Создаем JSON
-    request = {}
-    request['name'] = "sberCat"
-    request['category'] = {}
-    request['category']['name'] = "cats"
-    request['photoUrls'] = ["photoSberCat1"]
+    request = generate_json_steps.create_json_pet_not_name_params()
     # Отправлям запрос
     response_post = requests.post(urls.url_pet_post, json=request)
     # Анализируем ответ
     print("result pretty =", response_post.json())
-    assert response_post.json()['id'] is not None
-    # Создаем JSON
+    assert_steps.assert_not_none_id(response_post)
+    # Создаем файл
     additional_metadata = {'additionalMetadata': '111'}
     files = {'file': open('test.jpg', 'rb')}
     # Отправлям запрос
@@ -145,7 +137,7 @@ def test_post_pet_uploadImage_name_negative():
                                               files=files)
     # Анализируем ответ
     print('response_post_uploadImage', response_post_uploadImage.json())
-    assert response_post_uploadImage.json()['code'] == 404
+    assert_steps.assert_status_code_404(response_post_uploadImage)
 
 
 # Тест поиска питомца по статусу
@@ -156,7 +148,7 @@ def test_get_pet_findByStatus():
     response_get = requests.get(urls.url_findByStatus, params=params)
     # Анализируем ответ
     print("result pretty =", json.dumps(response_get.json(), indent=4, sort_keys=True))
-    assert response_get.status_code == 200
+    assert_steps.assert_status_code_200(response_get)
 
 
 # Тест поиска питомца по несуществующему статусу
@@ -167,22 +159,18 @@ def test_get_pet_findByStatus_status_negative():
     response_get = requests.get(urls.url_findByStatus, params=params)
     # Анализируем ответ
     print("result pretty =", json.dumps(response_get.json(), indent=4, sort_keys=True))
-    assert response_get.json() == []
+    assert_steps.assert_response_none(response_get)
 
 
 # Тест обновление питомца через Форму
 def test_post_pet_updates():
     # Создаем JSON
-    request = {}
-    request['name'] = support_steps.generate_random_letter_string(6)
-    request['category'] = {}
-    request['category']['name'] = "cats"
-    request['photoUrls'] = ["photoSberCat1"]
+    request = generate_json_steps.create_json_pet_required_params()
     # Отправлям запрос
     response_post = requests.post(urls.url_pet_post, json=request)
     # Анализируем ответ
     print("result pretty =", response_post.json())
-    assert response_post.json()['id'] is not None
+    assert_steps.assert_not_none_id(response_post)
     # Создаем JSON
     parems = {'name': 'Doggii', 'status': 'available'}
     # Отправлям запрос
@@ -191,9 +179,8 @@ def test_post_pet_updates():
     # Проверяем через GET, что объект изменен
     response_get = requests.get(urls.url_pet_get_id(str(response_post.json()['id'])))
     print(response_get.json())
-    assert response_get.json()['id'] == response_post.json()['id']
-    assert response_get.json()['name'] == 'Doggii'
-    assert response_get.json()['status'] == 'available'
+    assert_steps.assert_equals_response_ids(response_post, response_get)
+    assert_steps.assert_equals_response_names(response_post, response_get)
 
 
 # Тест обновление питомца через Форму по несуществующему ID
@@ -204,6 +191,7 @@ def test_post_pet_updates_id_negative():
     response_post_updates = requests.post(urls.url_pet_get_id("7777777667777"), parems)
     # Анализируем ответ
     print(response_post_updates.json())
-    assert response_post_updates.json()['code'] == 404
-    assert response_post_updates.json()['type'] == 'unknown'
-    assert response_post_updates.json()['message'] == 'not found'
+    assert_steps.assert_status_code_404(response_post_updates)
+    assert_steps.assert_type_unknown(response_post_updates)
+
+
