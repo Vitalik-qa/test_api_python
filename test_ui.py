@@ -13,8 +13,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
-
-
+from selenium.webdriver.common.action_chains import ActionChains
 
 
 def test_ui():
@@ -25,21 +24,52 @@ def test_ui():
     browser.find_element(By.XPATH, "//a[@title = 'Изменить регион']")
     browser.find_element(By.XPATH, "//a[@title = 'Изменить регион']/following ::a[1]")
     browser.find_element(By.XPATH, "//a[@class= 'kitt-header-search' ]")
-
-
-"""
-    search = browser.find_element(By.XPATH, "//div[@subsegment= 'premier']/preceding:: div[1]")
-    search.click()
-
-    search_word = browser.find_element(By.NAME, 'text')
-    search_word.send_keys("Кредит")
-
-    body = driver.find_element_by_tag_name("body")
-    body.click()
-
-
-    english = browser.find_element(By.XPATH, "//div[text()='English version']")
-    english.click()
+    driver.find_element_by_tag_name('body').send_keys(Keys.END)
     time.sleep(5)
-"""
+
+
+#тест - проверка наведения курсора мыши на объект
+def test_mouse_over_menu():
+    with allure.step("Tест - проверка наведения курсора мыши на объект"):
+        driver = webdriver.Chrome()
+        driver.delete_all_cookies()
+        driver.get("https://www.sberbank.ru/ru/person/kibrary")
+        time.sleep(5)
+
+        button_cources = driver.find_element(By.XPATH, "//a[@class= 'kitt-header__link']")
+        action.move_to_element(button_cources).click().perform()
+        time.sleep(5)
+
+        button_offices = driver.find_element(By.XPATH, "//a[@class= 'kitt-header__link kitt-header__oib'  and text() = 'Офисы']")
+        ActionChains(driver).move_to_element(button_offices).perform()
+        time.sleep(5)
+
+        button_atm = driver.find_element(By.XPATH, "//a[@class= 'kitt-header__link kitt-header__oib'  and text() = 'Банкоматы']")
+        ActionChains(driver).move_to_element(button_atm).perform()
+        time.sleep(5)
+
+        button_geo = driver.find_element(By.XPATH, "//a[@title = 'Изменить регион']")
+        ActionChains(driver).move_to_element(button_geo).perform()
+        time.sleep(5)
+
+        button_eng = driver.find_element(By.XPATH, "//a[@title = 'Изменить регион']/following ::a[1]")
+        ActionChains(driver).move_to_element(button_eng).perform()
+        time.sleep(5)
+
+        button_search = driver.find_element(By.XPATH, "//a[@class= 'kitt-header-search' ]")
+        ActionChains(driver).move_to_element(button_search).perform()
+        time.sleep(5)
+        driver.quit()
+
+# тест проверяет переключения на английский язык
+def test_change_language():
+    with allure.step("Тест проверяет переключения на английский язык"):
+        driver = webdriver.Chrome()
+        driver.delete_all_cookies()
+        driver.get("https://www.sberbank.ru/ru/person/kibrary")
+        time.sleep(5)
+        button_eng = driver.find_element(By.XPATH, "//a[@title = 'Изменить регион']/following ::a[1]")
+        button_eng.click()
+        time.sleep(5)
+        driver.quit()
 

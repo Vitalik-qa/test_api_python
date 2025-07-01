@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45515ce8-d7fc-44bb-8c90-d975b00f2389" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_05_2025_14_12_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_05_2025_14_12__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_ui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +57,7 @@
       <recent name="C:\Users\Vitaliy\Documents\GitHub\test_api_python\test_pet" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_ui.test_ui">
+  <component name="RunManager" selected="Python tests.Python tests for test_ui.test_mouse_over_menu">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,6 +149,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test_ui.test_mouse_over_menu" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="test_api_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_ui.test_mouse_over_menu&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for test_ui.test_ui" type="tests" factoryName="Autodetect" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,6 +181,7 @@
       <item itemvalue="Python.main" />
       <item itemvalue="Python tests.Python tests for test_post.test_post_pet" />
       <item itemvalue="Python tests.Python tests for test_ui.test_ui" />
+      <item itemvalue="Python tests.Python tests for test_ui.test_mouse_over_menu" />
       <item itemvalue="Python tests.Python tests for test_pet_api.test_post_pet_updates" />
       <item itemvalue="Python tests.Python tests for test_pet_api.test_post_pet_updates_id_negative" />
       <item itemvalue="Python tests.Python tests for test_pet_get.test_pet" />
@@ -177,6 +189,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_ui.test_mouse_over_menu" />
         <item itemvalue="Python tests.Python tests for test_pet_put.test_put_pet_id_negative" />
         <item itemvalue="Python tests.Python tests for test_pet_get.test_pet" />
         <item itemvalue="Python tests.Python tests for test_pet_api.test_post_pet_updates_id_negative" />
