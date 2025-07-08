@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45515ce8-d7fc-44bb-8c90-d975b00f2389" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/locators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_ui.py" afterDir="false" />
     </list>
@@ -57,7 +58,7 @@
       <recent name="C:\Users\Vitaliy\Documents\GitHub\test_api_python\test_pet" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_ui.test_mouse_over_menu">
+  <component name="RunManager" selected="Python tests.Python tests for test_ui.test_ui">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="test_api_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
