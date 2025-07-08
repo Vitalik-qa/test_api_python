@@ -10,6 +10,7 @@ import Steps.assert_steps as assert_steps
 
 
 
+@allure.step("GET")
 @pytest.mark.smoke_tests
 @pytest.mark.regress_tests
 @pytest.mark.positive_tests
@@ -26,6 +27,8 @@ def test_pet():
         assert_steps.assert_equals_response_ids(response_post, response_get)
         assert_steps.assert_equals_response_names(response_post, response_get)
 
+
+@allure.step("GET")
 @pytest.mark.regress_tests
 @pytest.mark.negative_tests
 # Тест получения  питомца по несуществующему ID

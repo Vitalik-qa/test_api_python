@@ -1,0 +1,8 @@
+{'name': 'cfdcae', 'category': {'name': 'dffbcb'}, 'photoUrts': ['bfbfab']}
+<Response [200]>
+PASSED
+first = {'id': 9223372036854775807, 'category': {'id': 0, 'name': 'dffbcb'}, 'name': 'cfdcae', 'photoUrls': [], 'tags': []}
+second = {'id': 9223372036854775807, 'category': {'id': 0, 'name': 'string'}, 'name': 'doggie', 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'string'}], 'status': 'string'}
+PASSED
+first = {'id': 9223372036854775807, 'category': {'id': 0, 'name': 'dffbcb'}, 'name': 'cfdcae', 'photoUrls': [], 'tags': []}
+second = {'id': 9223372036854775807, 'category': {'id': 0, 'name': 'string'}, 'name': 'doggie', 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'string'}], 'status': 'string'}
