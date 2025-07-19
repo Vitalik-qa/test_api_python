@@ -1,0 +1,5 @@
+SEARCH = "//*[@id ='text']"
+TEMP = "//*[@class='informers3-weather__text']"
+USD = "//*[contains(@aria-label,'USD')]"
+EUR = "//*[contains(@aria-label,'EUR')]"
+YDEX = "//*[contains(@aria-label,'YDEX')]"
